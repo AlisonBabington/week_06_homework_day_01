@@ -22,7 +22,7 @@ Park.prototype.checkMostPopDino = function () {
 };
 
 Park.prototype.findAllSpecies = function (species) {
-  let foundDino = []
+  let foundDino = [];
   for (dinosaur of this.dinosaurs) {
     (dinosaur.species === species)? foundDino.push(dinosaur): null;
   };
@@ -35,6 +35,14 @@ Park.prototype.findAllSpecies = function (species) {
    dino = this.dinosaurs.indexOf(dinosDelete[i]);
     this.dinosaurs.splice(dino, 1);
   }
+ };
+
+ Park.prototype.countVisitors = function () {
+   let visitors = 0;
+   for (dinosaur of this.dinosaurs) {
+     visitors += dinosaur.guestsAttractedPerDay;
+   };
+   return visitors;
  };
 
 

@@ -66,4 +66,17 @@ describe('Park', function() {
     assert.strictEqual(actual, 0)
   });
 
+  // A park must be able to:
+  //
+  // - Calculate the total number of visitors per day
+  it('should be able to calculate visitors per day', function () {
+    const actual =  park.countVisitors()
+    assert.strictEqual (actual, 135)
+  });
+  // - Calculate the total number of visitors per year
+  // - Calculate the total revenue from ticket sales for one year
+  // - Provide an object containing each of the diet types and
+   // the number of dinosaurs in the park of that diet type
+  // Example: `{ 'carnivore': 5, 'herbivore': 2, 'omnivore': 1 }`
+
 });
