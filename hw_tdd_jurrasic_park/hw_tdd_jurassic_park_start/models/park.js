@@ -45,5 +45,11 @@ Park.prototype.findAllSpecies = function (species) {
    return visitors;
  };
 
+ Park.prototype.countYearVisitors = function () {
+   const daily = this.countVisitors();
+   let yearly = daily * 365;
+   return yearly;
+ };
+
 
 module.exports = Park;

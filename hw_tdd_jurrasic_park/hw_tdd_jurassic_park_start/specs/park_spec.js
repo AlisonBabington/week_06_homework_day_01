@@ -63,17 +63,18 @@ describe('Park', function() {
     park.removeAllBySpecies("Velociraptor");
     found_dinos = park.findAllSpecies("Velociraptor");
     const actual = found_dinos.length;
-    assert.strictEqual(actual, 0)
+    assert.strictEqual(actual, 0);
   });
 
-  // A park must be able to:
-  //
-  // - Calculate the total number of visitors per day
   it('should be able to calculate visitors per day', function () {
-    const actual =  park.countVisitors()
+    const actual =  park.countVisitors();
     assert.strictEqual (actual, 135)
   });
   // - Calculate the total number of visitors per year
+  it('should be able to calculate visitors per year', function () {
+    const actual = park.countYearVisitors();
+    assert.strictEqual (actual, 49275)
+  })
   // - Calculate the total revenue from ticket sales for one year
   // - Provide an object containing each of the diet types and
    // the number of dinosaurs in the park of that diet type
