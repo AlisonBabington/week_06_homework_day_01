@@ -51,5 +51,11 @@ Park.prototype.findAllSpecies = function (species) {
    return yearly;
  };
 
+ Park.prototype.yearlyTicketRevenue = function () {
+   const visitors = this.countYearVisitors();
+   let yearPrice = visitors * this.ticketPrice;
+   return yearPrice;
+ };
+
 
 module.exports = Park;

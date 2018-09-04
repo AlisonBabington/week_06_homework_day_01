@@ -70,12 +70,16 @@ describe('Park', function() {
     const actual =  park.countVisitors();
     assert.strictEqual (actual, 135)
   });
-  // - Calculate the total number of visitors per year
+
   it('should be able to calculate visitors per year', function () {
     const actual = park.countYearVisitors();
     assert.strictEqual (actual, 49275)
   })
   // - Calculate the total revenue from ticket sales for one year
+  it('should calculate yearly ticket revenue', function () {
+    const actual = park.yearlyTicketRevenue();
+    assert.strictEqual (actual, 4927500)
+  })
   // - Provide an object containing each of the diet types and
    // the number of dinosaurs in the park of that diet type
   // Example: `{ 'carnivore': 5, 'herbivore': 2, 'omnivore': 1 }`
