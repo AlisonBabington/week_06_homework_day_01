@@ -24,10 +24,17 @@ Park.prototype.checkMostPopDino = function () {
 Park.prototype.findAllSpecies = function (species) {
   let foundDino = []
   for (dinosaur of this.dinosaurs) {
-    console.log(dinosaur);
     (dinosaur.species === species)? foundDino.push(dinosaur): null;
   };
   return foundDino;
+ };
+
+ Park.prototype.removeAllBySpecies = function (species) {
+   let dinosDelete = this.findAllSpecies(species);
+   for (let i = 0; i < dinosDelete.length; i++) {
+   dino = this.dinosaurs.indexOf(dinosDelete[i]);
+    this.dinosaurs.splice(dino, 1);
+  }
  };
 
 
